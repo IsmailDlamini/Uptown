@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,300;0,400;0,500;0,700;1,300&display=swap");
+:root {
+  --font-poppins: Poppins;
+  --font-raleway: Raleway;
+}
+
+.section-header {
+  width: 100%;
+  height: 60px;
+  color: #f6f2ea;
+  font-family: var(--font-raleway);
+  text-align: center;
+  line-height: normal;
+  border-bottom: 1px solid #f6f2ea;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1vw;
+  z-index: 5;
+}
+
+.section-header span {
+  margin: 0 3px;
+}
+
+.section-header .book-now {
+  position: absolute;
+  right: 0;
+  padding: 0 20px;
+  border-left: 1px solid #f6f2ea;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+#bold {
+  font-weight: 700;
+}
+
+#medium {
+  font-weight: 500;
+}
+
+#light {
+  font-weight: 300;
+}
+
+@media screen and (max-width: 600px) {
+  .section-header {
+    width: 100%;
+    height: 60px;
+    color: #f6f2ea;
+    font-family: var(--font-raleway);
+    text-align: center;
+    line-height: normal;
+    border-bottom: 1px solid #f6f2ea;
+    padding-left: 10px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 13px;
+  }
+
+  .section-header span {
+    margin: 0 2px;
+  }
+
+  .section-header .book-now {
+    position: absolute;
+    right: 0;
+    padding: 0 20px;
+    border-left: 1px solid #f6f2ea;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 13px;
+    margin-left: 20px;
+  }
+
+  #bold {
+    font-weight: 700;
+  }
+
+  #medium {
+    font-weight: 500;
+  }
+
+  #light {
+    font-weight: 300;
+  }
+}
+
+
+@media only screen and (min-width: 600px) and (max-width: 1000px) {
+  .section-header {
+    width: 100%;
+    height: 60px;
+    color: #f6f2ea;
+    font-family: var(--font-raleway);
+    text-align: center;
+    line-height: normal;
+    border-bottom: 1px solid #f6f2ea;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+  }
+
+  .section-header span {
+    margin: 0 2px;
+  }
+
+  .section-header .book-now {
+    position: absolute;
+    right: 0;
+    padding: 0 20px;
+    border-left: 1px solid #f6f2ea;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 20px;
+    margin-left: 20px;
+  }
+
+  #bold {
+    font-weight: 700;
+  }
+
+  #medium {
+    font-weight: 500;
+  }
+
+  #light {
+    font-weight: 300;
+  }
+}
