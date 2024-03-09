@@ -33,10 +33,11 @@
   position: absolute;
   z-index: 0;
   object-fit: cover;
+  overflow: hidden;
 }
 
 .home-section .slide-show-background img {
-  height: 100%;
+  height: 110%;
   position: absolute;
   width: 100%;
   transition: opacity 2s ease-in-out;
@@ -161,6 +162,7 @@
   height: 100%;
   position: absolute;
   width: 100%;
+  object-fit: cover;
   transition: opacity 2s ease-in-out;
   opacity: 0;
 }
@@ -277,7 +279,7 @@
 .section-4 .section-content .image {
   width: 30%;
   height: 70%;
-  background-image: url("C:\Users\Ismail\Desktop\Uptown Apartments\client\src\assets\section-4-image.png");
+  background-image: url("C:\Users\Ismail\Desktop\Uptown Apartments\client\src\assets\section-4-image-1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -302,7 +304,7 @@
 .section-5 .section-content .image {
   width: 30%;
   height: 70%;
-  background-image: url("C:\Users\Ismail\Desktop\Uptown Apartments\client\src\assets\section-5-image.png");
+  background-image: url("C:\Users\Ismail\Desktop\Uptown Apartments\client\src\assets\section-5-image-1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -391,10 +393,19 @@
 .section-7 {
   width: 100%;
   height: 100vh;
-  background-image: url("C:\Users\Ismail\Desktop\Uptown Apartments\client\src\assets\section-7-background-image.png");
+  background-image: url("C:\Users\Ismail\Desktop\Uptown Apartments\client\src\assets\section-1-slide-1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
+}
+
+.section-7 .overlay{
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: #352c24;
+  z-index: 0;
+  opacity: 73%;
 }
 
 .section-7 .section-content {
@@ -428,6 +439,8 @@
   width: 70%;
   margin-left: 5%;
   height: 80%;
+  position: relative;
+  z-index: 1;
 }
 
 .section-7 .section-content .form .title {
@@ -869,13 +882,15 @@
   }
 
   .section-7 .section-content .image {
-    width: 70%;
-    height: 20%;
+    width: 40%;
+    height: 15%;
      margin-top: 5vh;
   }
 
   .section-7 .section-content .image img {
     position: absolute;
+    width: 100%;
+    height: 100%;
     transition: opacity 2s ease-in-out;
   }
 
@@ -1077,7 +1092,7 @@
     width: 46%;
     padding: 10px 0;
     cursor: pointer;
-    font-size: 3.5vw;
+    font-size: 3vw;
     margin-top: 2vh;
   }
 
@@ -1096,7 +1111,7 @@
 
   .section-2 .section-content .text {
     width: 100%;
-    text-align: center;
+    text-align: left;
     flex-direction: column;
     justify-content: initial;
   }
@@ -1108,13 +1123,13 @@
   }
 
   .section-2 .section-content .text p {
-    font-size: 3.5vw;
+    font-size: 3vw;
     padding-right: 0vw;
     margin-top: 3vw;
   }
 
   .section-2 .section-content .image {
-    width: 85%;
+    width: 80%;
     height: 60%;
     margin-right: 0vw;
     margin-top: 3vh;
@@ -1146,23 +1161,23 @@
   }
 
   .section-3 .section-content .text .h1 {
-    font-size: 10vw;
+    font-size: 8vw;
     padding-right: 0vw;
     margin-bottom: 3vw;
-    text-align: center;
+    text-align: left;
     margin-top: 5vh;
   }
 
   .section-3 .section-content .text p {
     padding-right: 0;
-    font-size: 3.5vw;
+    font-size: 3vw;
     margin-top: 2vw;
-    text-align: center;
+    text-align: left;
     margin-top: 2vh;
   }
 
   .section-3 .section-content .image {
-    width: 85%;
+    width: 80%;
     height: 60%;
     margin-right: 0vw;
     margin: 0 auto;
@@ -1187,21 +1202,21 @@
   }
 
   .section-4 .section-content .text .h1 {
-    font-size: 10vw;
+    font-size: 7vw;
     padding-right: 0vw;
-    text-align: center;
+    text-align: left;
     margin-top: 2vh;
   }
 
   .section-4 .section-content .text p {
     margin-top: 2vh;
     font-size: 3.5vw;
-    text-align: center;
+    text-align: left;
     padding-right: 0;
   }
 
   .section-4 .section-content .image {
-    width: 85%;
+    width: 80%;
     height: 60%;
     margin-top: 3vh;
   }
@@ -1219,7 +1234,7 @@
   }
 
   .section-5 .section-content .image {
-    width: 85%;
+    width: 80%;
     height: 55%;
     margin: 0 auto;
     margin-top: 2vh;
@@ -1227,18 +1242,18 @@
 
   .section-5 .section-content .text {
     width: 100%;
-    text-align: center;
+    text-align: left;
     padding-left: 0;
     margin-top: 3vh;
     height: fit-content;
   }
 
   .section-5 .section-content .text .h1 {
-    font-size: 10vw;
+    font-size: 8vw;
   }
 
   .section-5 .section-content .text p {
-    font-size: 3.5vw;
+    font-size: 3vw;
     margin-top: 3vh;
   }
 
@@ -1258,7 +1273,7 @@
   }
 
   .section-6 .section-content .images-slide-show {
-    width: 95%;
+    width: 90%;
     overflow: hidden;
   }
 
@@ -1278,8 +1293,8 @@
   }
 
   .section-6 .section-content .image-nav button {
-    margin-right: 10px;
-    font: 4.5vw var(--font-raleway);
+    margin-right: 20px;
+    font: 4vw var(--font-raleway);
   }
 
   /* section-7-styling*/
@@ -1296,7 +1311,7 @@
   }
 
   .section-7 .section-content .image {
-    width: 70%;
+    width: 30%;
     height: 20%;
      margin-top: 5vh;
   }
@@ -1386,7 +1401,7 @@
 
   .footer {
     width: 100%;
-    height: 400px;
+    height: 600px;
   }
 
   .footer .info {

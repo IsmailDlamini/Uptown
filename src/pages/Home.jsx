@@ -9,30 +9,30 @@ import section_1_slide_3 from "../assets/section-1-slide-3.jpg";
 import section_1_slide_4 from "../assets/section-1-slide-4.jpg";
 
 // section 2 slides
-import section_2_slide_1 from "../assets/section-2-slide-1.png";
-import section_2_slide_2 from "../assets/section-2-slide-2.png";
-import section_2_slide_3 from "../assets/section-2-slide-3.png";
+import section_2_slide_1 from "../assets/section-2-slide-1.jpg";
+import section_2_slide_2 from "../assets/section-2-slide-2.jpg";
+import section_2_slide_3 from "../assets/section-2-slide-3.jpg";
 
 // section 3 slides
-import section_3_slide_1 from "../assets/section-3-slide-1.png";
-import section_3_slide_2 from "../assets/section-3-slide-2.png";
-import section_3_slide_3 from "../assets/section-3-slide-3.png";
+import section_3_slide_1 from "../assets/section-3-slide-1.jpg";
+import section_3_slide_2 from "../assets/section-3-slide-2.jpg";
+import section_3_slide_3 from "../assets/section-3-slide-3.jpg";
 
 // section 6 slides
-import section_6_slide_1 from "../assets/section-6-slide-1.png";
-import section_6_slide_2 from "../assets/section-6-slide-2.png";
-import section_6_slide_3 from "../assets/section-6-slide-3.png";
-import section_6_slide_4 from "../assets/section-6-slide-4.png";
-import section_6_slide_5 from "../assets/section-6-slide-5.png";
-import section_6_slide_6 from "../assets/section-6-slide-6.png";
-import section_6_slide_7 from "../assets/section-6-slide-7.png";
-import section_6_slide_8 from "../assets/section-6-slide-8.png";
-import section_6_slide_9 from "../assets/section-6-slide-9.png";
-import section_6_slide_10 from "../assets/section-6-slide-10.png";
-import section_6_slide_11 from "../assets/section-6-slide-11.png";
-import section_6_slide_12 from "../assets/section-6-slide-12.png";
-import section_6_slide_13 from "../assets/section-6-slide-13.png";
-import section_6_slide_14 from "../assets/section-6-slide-14.png";
+import section_6_slide_1 from "../assets/section-6-slide-1.jpg";
+import section_6_slide_2 from "../assets/section-6-slide-2.jpg";
+import section_6_slide_3 from "../assets/section-6-slide-3.jpg";
+import section_6_slide_4 from "../assets/section-6-slide-4.jpg";
+import section_6_slide_5 from "../assets/section-6-slide-5.jpg";
+import section_6_slide_6 from "../assets/section-6-slide-6.jpg";
+import section_6_slide_7 from "../assets/section-6-slide-7.jpg";
+import section_6_slide_8 from "../assets/section-6-slide-8.jpg";
+import section_6_slide_9 from "../assets/section-6-slide-9.jpg";
+import section_6_slide_10 from "../assets/section-6-slide-10.jpg";
+import section_6_slide_11 from "../assets/section-6-slide-11.jpg";
+import section_6_slide_12 from "../assets/section-6-slide-12.jpg";
+import section_6_slide_13 from "../assets/section-6-slide-13.jpg";
+import section_6_slide_14 from "../assets/section-6-slide-14.jpg";
 
 // section 7 slides
 import section_7_slide_1 from "../assets/section-7-slide-1.jpg";
@@ -59,7 +59,7 @@ import phone_icon from "../assets/phone-icon.png";
 
 const Home = () => {
   const link =
-    "https://www.booking.com/hotel/za/uptown-villa-1.en-gb.html?aid=356980&label=gog235jc-1DCAso-wFCDnVwdG93bi12aWxsYS0xSDNYA2j7AYgBAZgBCbgBGMgBDNgBA-gBAYgCAagCBLgC5YSVrgbAAgHSAiQ0ZjdhN2NiOC04YzJiLTRjMzMtYmUyZC1kMDEwZjg4ZGQ0NzPYAgTgAgE&sid=171fc412c5653ac765f32875e7ab7ba0&dist=0&group_adults=2&keep_landing=1&sb_price_type=total&type=total&#availability ";
+    "https://linktr.ee/uptownapartmentproperties ";
 
   const slides_section_1 = [
     section_1_slide_1,
@@ -138,8 +138,6 @@ const Home = () => {
     const div = document.querySelector("." + divClass);
     div.scrollIntoView({ behavior: "smooth" });
   };
-
-  //style={{backgroundImage: `url(${slides_section_1[currentSlide]})`}}
 
   return (
     <>
@@ -516,7 +514,11 @@ const Home = () => {
         </div>
 
         <div className="section-7">
+        <div className="overlay">
+            
+            </div>
           <SectionHeader />
+          
           <div className="arrows">
             <img
               src={arrow_section_7_up}
@@ -554,7 +556,7 @@ const Home = () => {
                 the contact details below.
               </div>
 
-              <form action="" method="POST">
+              <form action="mail.php" method="POST">
                 <label htmlFor="name">Name</label>
                 <input
                   type="text"
