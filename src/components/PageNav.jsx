@@ -1,4 +1,5 @@
-import "./PageNav.css";
+//import "./PageNav.css";
+import "../pages/Home2.css";
 
 const PageNav = (props) => {
   const { theme, pageNumber } = props;
@@ -11,13 +12,13 @@ const PageNav = (props) => {
     "section-5",
     "section-6",
     "section-7",
-  ]
+  ];
 
   const scrollToDiv = (divClass) => {
     // Select the div using getElementById or querySelector
     const div = document.querySelector("." + divClass);
     // Scroll to the div
-    div.scrollIntoView({ behavior: 'smooth' });
+    div.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -34,7 +35,9 @@ const PageNav = (props) => {
                       ? "rgba(127, 112, 115, 1)"
                       : "rgba(246, 242, 234, 1)",
                 }}
-                onClick={() => {scrollToDiv(sections[index])}}
+                onClick={() => {
+                  scrollToDiv(sections[index]);
+                }}
               ></li>
             ))}
           </ul>
@@ -49,7 +52,9 @@ const PageNav = (props) => {
                       ? "rgba(53, 44, 36, 1)"
                       : "rgba(201, 183, 156, 1)",
                 }}
-                onClick={() => {scrollToDiv(sections[index])}}
+                onClick={() => {
+                  scrollToDiv(sections[index]);
+                }}
               ></li>
             ))}
           </ul>
@@ -64,7 +69,9 @@ const PageNav = (props) => {
                       ? "rgba(53, 44, 36, 1)"
                       : "rgba(246, 242, 234, 1)",
                 }}
-                onClick={() => {scrollToDiv(sections[index])}}
+                onClick={() => {
+                  scrollToDiv(sections[index]);
+                }}
               ></li>
             ))}
           </ul>

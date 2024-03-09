@@ -1,5 +1,5 @@
 import SectionHeader from "../components/SectionHeader";
-import "./Home.css";
+import "./Home2.css";
 import { useState, useEffect } from "react";
 
 // section 1 slides
@@ -59,7 +59,7 @@ import phone_icon from "../assets/phone-icon.png";
 
 const Home = () => {
   const link =
-    "https://linktr.ee/uptownapartmentproperties ";
+    "https://linktr.ee/uptownapartmentproperties";
 
   const slides_section_1 = [
     section_1_slide_1,
@@ -137,6 +137,42 @@ const Home = () => {
   const scrollToDiv = (divClass) => {
     const div = document.querySelector("." + divClass);
     div.scrollIntoView({ behavior: "smooth" });
+  };
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    enquiry: "",
+  });
+
+  const handleSubmit = async (e) => {
+
+    e.preventDefault();
+    try {
+      const response = await fetch("/send-mail.php", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+    
+      alert("Email sent successfully!");
+    } catch (error) {
+      console.error("There was a problem with the fetch operation:", error);
+      alert(
+        "An error occurred while sending the email. Please try again later."
+      );
+    }
+  };
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
   };
 
   return (
@@ -556,7 +592,7 @@ const Home = () => {
                 the contact details below.
               </div>
 
-              <form action="mail.php" method="POST">
+              <form onSubmit={handleSubmit}>
                 <label htmlFor="name">Name</label>
                 <input
                   type="text"
@@ -564,6 +600,8 @@ const Home = () => {
                   id="name"
                   placeholder="Jane Doe"
                   required
+                  value={formData.name}
+                  onChange={handleChange}
                 />
                 <label htmlFor="email">Email</label>
                 <input
@@ -572,6 +610,8 @@ const Home = () => {
                   id="email"
                   placeholder="janedoe@gmail.com"
                   required
+                  value={formData.email}
+                  onChange={handleChange}
                 />
                 <label htmlFor="enquiry">Enquiry</label>
                 <textarea
@@ -579,6 +619,8 @@ const Home = () => {
                   id="enquiry"
                   placeholder="Hello, are you available on the 25th of December?"
                   required
+                  value={formData.enquiry}
+                  onChange={handleChange}
                 ></textarea>
 
                 <button>Submit</button>

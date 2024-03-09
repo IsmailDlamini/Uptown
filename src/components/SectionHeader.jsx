@@ -1,8 +1,9 @@
-import "./SectionHeader.css";
+//import "./SectionHeader.css";
+import "../pages/Home2.css";
 
 const SectionHeader = (prop) => {
   const link =
-    "https://linktr.ee/uptownapartmentproperties ";
+    "https://linktr.ee/uptownapartmentproperties";
 
   return (
     <>
